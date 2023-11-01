@@ -8,7 +8,7 @@ pipeline{
         stage("build"){
             steps{
                 echo "Start Building"
-                sh("./mwnw clean compile test-compile")
+                sh("./mvnw clean compile test-compile")
                 echo "Finish building"
 
             }
@@ -16,7 +16,7 @@ pipeline{
         stage("test"){
             steps{
                 echo "I am Testing"
-                sh("./mwnw test")
+                sh("./mvnw test")
                 echo "Finish Testing"
                 
             }
