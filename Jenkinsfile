@@ -7,6 +7,11 @@ pipeline{
     stages{
         stage("build"){
             steps{
+                script{
+                    for(int i =0; i<=10; i++){
+                        echo("Scripts ${i}")
+                    }
+                }
                 echo "Start Building"
                 sh("./mvnw clean compile test-compile")
                 echo "Finish building"
