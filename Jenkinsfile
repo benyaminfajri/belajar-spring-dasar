@@ -13,6 +13,7 @@ pipeline{
         stage("test"){
             steps{
                 echo "I am Testing"
+                sh "error"
             }
         }
         stage("deploy"){
