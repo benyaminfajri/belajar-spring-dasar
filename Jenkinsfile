@@ -12,4 +12,24 @@ pipeline{
         }
         
     }
+    post{
+        always{
+            echo 'I always excecute'
+        }
+        regression{
+            echo "I am on Regression"
+        }
+        fixed {
+            echo "I am on fixed"
+        }
+        success{
+            echo "I am on success"
+        }
+        failure{
+            echo "I am on failure"
+        }
+        cleanup{
+            echo "I am on cleanup"
+        }
+    }
 }
