@@ -22,7 +22,7 @@ pipeline{
             steps{
                 script{
                     def data = ["writer":"benz", "book":"hopkins"]
-                    writeJSON("myjson.json",data)
+                    writeJSON(file: "myjson.json",json: data)
                 }
                 echo "I am Testing"
                 sh("./mvnw test")
