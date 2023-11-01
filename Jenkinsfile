@@ -7,19 +7,17 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                echo "I am Building"
-                sleep (5)
-                echo "I am Building 2"
-                echo "I am Building 3"
+                echo "Start Building"
+                sh("./mwnw clean compile test-compile")
+                echo "Finish building"
 
             }
         }
         stage("test"){
             steps{
                 echo "I am Testing"
-                sleep (5)
-                echo "I am Testing 2"
-                echo "I am Testing 3"
+                sh("./mwnw test")
+                echo "Finish Testing"
                 
             }
         }
