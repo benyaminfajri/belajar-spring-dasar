@@ -8,17 +8,27 @@ pipeline{
         stage("build"){
             steps{
                 echo "I am Building"
+                sleep (5)
+                echo "I am Building 2"
+                echo "I am Building 3"
+
             }
         }
         stage("test"){
             steps{
                 echo "I am Testing"
-                sh "error"
+                sleep (5)
+                echo "I am Testing 2"
+                echo "I am Testing 3"
+                
             }
         }
         stage("deploy"){
             steps{
                 echo "I am Deploying"
+                sleep (5)
+                echo "I am Deploying 2"
+                echo "I am Deploying 3"
             }
         }
         
